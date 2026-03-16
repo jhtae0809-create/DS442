@@ -9,7 +9,7 @@ student_name = "Hyuntae Jeong"
 ############################################################
 
 # Include your imports here, if any are used.
-
+import random
 
 ############################################################
 # Section 1: Dominoes Game
@@ -64,11 +64,11 @@ class DominoesGame(object):
         return DominoesGame(self.__board)
 
     def successors(self, vertical):
-        for i in self.legal_moves(vertical):
-            
+        for i, j in self.legal_moves(vertical):
+            yield (i, j), self.copy().execute_move(i,j, vertical)
 
     def get_random_move(self, vertical):
-        pass
+        return random.choice(self.legal_moves(vertical))
 
     # Required
     def get_best_move(self, limit, vertical):
