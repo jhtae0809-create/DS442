@@ -287,28 +287,32 @@ class Sudoku(object):
             return True
         if self.unsolvable():
             return False
-        #guess = None
+        guess = None
+        min_len=10
         for cell in self.CELLS:
-            if len(self.__board[cell])>1:
+            l = len(self.__board[cell])
+            if len(self.__board[cell])>1 and l<min_len:
+                min_len=l
                 guess = cell
-                cand = self.__board[guess]
-                for i in cand:
-                    backup = copy.deepcopy(self.__board)
-                    self.__board[guess] = {i}
-                    if self.infer_with_guessing():
-                        return True
-                    self.__board = backup
+        cand = list(self.__board[guess])
+        for i in cand:
+            backup = {k: set(v) for k,v in self.__board.items()}
+            self.__board[guess] = {i}
+            if self.infer_with_guessing():
+                return True
+            self.__board = backup
+        return False
 
 
-# sudoku = Sudoku(read_board("sudoku/sudoku/hw3-hard1.txt"))
-# # print(sudoku.get_values((0,3)))
-# # print(sudoku.get_values((0,0)))
-# # print(sudoku.get_values((0,1)))
-# # print(sudoku.get_values((0,4)))
+sudoku = Sudoku(read_board("sudoku/sudoku/hw3-hard1.txt"))
+# print(sudoku.get_values((0,3)))
+# print(sudoku.get_values((0,0)))
+# print(sudoku.get_values((0,1)))
+# print(sudoku.get_values((0,4)))
 
-# # for col in [0, 1, 4]:
-# #     removed = sudoku.remove_inconsistent_values((0,3), (0,col))
-# #     print(removed, sudoku.get_values((0,3)))
-# sudoku.infer_with_guessing()
+# for col in [0, 1, 4]:
+#     removed = sudoku.remove_inconsistent_values((0,3), (0,col))
+#     print(removed, sudoku.get_values((0,3)))
+sudoku.infer_with_guessing()
 
-# print(sudoku.get_board())
+print(sudoku.get_board())
