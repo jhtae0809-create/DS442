@@ -105,7 +105,14 @@ def reward_len(completions, **kwargs):
     (Autograder will check this output for correctness.)
     """
     # TODO: Implement length-based reward
-    pass
+    rewards = []
+    for c in completions:
+        words = c.split()
+        wcount = len(words)
+        score = float(np.exp(-((wcount-50)**2)/800.0))
+        rewards.append(score)
+    return rewards
+
 
 
 def train_grpo(model_id, dataset, output_dir):

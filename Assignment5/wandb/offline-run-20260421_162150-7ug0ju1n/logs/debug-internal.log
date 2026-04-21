@@ -1,0 +1,7 @@
+{"time":"2026-04-21T16:21:50.328795-04:00","level":"INFO","msg":"stream: starting","core version":"0.19.7","symlink path":"/Users/jhtae/Documents/DS442/Assignment5/wandb/offline-run-20260421_162150-7ug0ju1n/logs/debug-core.log"}
+{"time":"2026-04-21T16:21:50.742427-04:00","level":"INFO","msg":"created new stream","id":"7ug0ju1n"}
+{"time":"2026-04-21T16:21:50.742486-04:00","level":"INFO","msg":"stream: started","id":"7ug0ju1n"}
+{"time":"2026-04-21T16:21:50.742508-04:00","level":"INFO","msg":"handler: started","stream_id":"7ug0ju1n"}
+{"time":"2026-04-21T16:21:50.742579-04:00","level":"INFO","msg":"sender: started","stream_id":"7ug0ju1n"}
+{"time":"2026-04-21T16:21:50.742551-04:00","level":"INFO","msg":"writer: Do: started","stream_id":"7ug0ju1n"}
+{"time":"2026-04-21T16:21:50.745553-04:00","level":"INFO","msg":"Starting system monitor"}

@@ -1,0 +1,43 @@
+{
+  "os":  "macOS-26.3-arm64-arm-64bit",
+  "python":  "CPython 3.10.12",
+  "startedAt":  "2026-04-21T20:21:50.290124Z",
+  "program":  "/Users/jhtae/Documents/DS442/Assignment5/homework5_hzj5293.py",
+  "codePath":  "Assignment5/homework5_hzj5293.py",
+  "git":  {
+    "remote":  "https://github.com/jhtae0809-create/DS442.git",
+    "commit":  "cc79a7e0ab5d13020520a83b7f1fbb78693d9283"
+  },
+  "root":  "/Users/jhtae/Documents/DS442/Assignment5",
+  "host":  "Hyuntaeui-MacBookPro.local",
+  "executable":  "/Users/jhtae/Documents/DS442/Assignment5/.venv/bin/python",
+  "codePathLocal":  "homework5_hzj5293.py",
+  "cpu_count":  8,
+  "cpu_count_logical":  8,
+  "disk":  {
+    "/":  {
+      "total":  "245107195904",
+      "used":  "110794420224"
+    },
+    "/System/Volumes/Data":  {
+      "total":  "245107195904",
+      "used":  "110794420224"
+    }
+  },
+  "memory":  {
+    "total":  "17179869184"
+  },
+  "cpu":  {
+    "count":  8,
+    "countLogical":  8
+  },
+  "apple":  {
+    "name":  "Apple M1",
+    "ecpuCores":  4,
+    "pcpuCores":  4,
+    "gpuCores":  8,
+    "memoryGb":  16,
+    "swapTotalBytes":  "2147483648",
+    "ramTotalBytes":  "17179869184"
+  }
+}
